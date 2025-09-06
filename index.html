@@ -46,6 +46,27 @@
     ul {
       padding-left: 20px;
     }
+    /* Optional visual grouping for project subsections under Experience */
+    .experience .subprojects {
+      margin-top: 12px;
+      padding: 12px 16px;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 6px;
+    }
+    .experience .subprojects h4 {
+      margin: 0 0 8px 0;
+      color: #555;
+    }
+    .experience .subprojects .project {
+      border: none;
+      margin: 0 0 12px 0;
+      padding: 0 0 12px 0;
+    }
+    .experience .subprojects .project:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   </style>
 </head>
 <body>
@@ -58,6 +79,113 @@
     <section>
       <h2>About Me</h2>
       <p>I'm a Data Science graduate student at UT Dallas with a strong background in deploying machine learning solutions in healthcare, NLP, and document parsing. Previously a Data Science Associate Consultant at ZS Associates with multiple impactful ML deployments in pharmaceutical analytics.</p>
+    </section>
+
+        <section>
+      <h2>Experience</h2>
+      <div class="experience">
+        <h3>ZS Associates – Data Science Associate Consultant (Jan 2024 - Apr 2024)</h3>
+        <ul>
+          <li>Led the deployment of a prediction model for early adoption of an oncology therapy developed by the client for NSCLC Patients which increased the product sales by 125% relative to the previous quarter</li>
+          <li>Completed the Early adoption model deployment in under 3 months while onboarding and mentoring the 4 member team</li>
+          <li>Won 2 projects in Bladder Cancer and Anhedonia Therapeutic Areas for the same client</li>
+          <li>Directed the daily client meetings and delegated tasks such that the project was delivered within schedule</li>
+        </ul>
+        <!-- No mapped project subsection for this role per instructions -->
+      </div>
+
+      <div class="experience">
+        <h3>ZS Associates – Data Science Associate (Jun 2021 - Dec 2023)</h3>
+        <ul>
+          <li>Served 3 Pharmaceutical and 1 Airline Client by delivering 7 ML/AI projects</li>
+          <li>Implemented a 300+ feature Data Engineering Pipeline using Pyspark in under 2 months</li>
+          <li>Implemented the research and development experiments for rareBERT algorithm over 1.5 years. The model had a 60% performance lift over the baseline approach for predicting early adopters of a drug</li>
+          <li>Trained health care provider models for 7 different target variables for Botox Treatment Therapy over 4 therapeutic areas that achieved at least 90% AUPRC</li>
+          <li>Accomplished and presented the results for the Botox model to the clients in under 4 weeks</li>
+        </ul>
+        <!-- Mapped projects for this role -->
+        <div class="subprojects">
+          <h4>Projects</h4>
+
+          <div class="project">
+            <h3>Early Adopter Prediction using Deep Learning (Jan 2022 - Mar 2023)</h3>
+            <ul>
+              <li>Predict the early adoption of a pharmaceutical product using patient journey data</li>
+              <li>Experimented with a graph based embedding model and rareBERT (variation of the original BERT model)</li>
+              <li>The models was tried on Immunology, Oncology, HIV Market</li>
+              <li>Outcome: The graph based model failed to give any desired results however rareBERT was performing 60% better than the baseline approach</li>
+              <li>Tech & Tools: PyTorch, Python, Parallel Programming, GPUs, PySpark, SQL, AWS (Redshift, EC2, EKS, SageMaker)</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Early Adopter using Feature Engineering (May 2023 - Apr 2024)</h3>
+            <ul>
+              <li>Using feature engineering and machine learning models trained on analog products to predict early adopters of a drug yet to launch</li>
+              <li>XGBoost model was used</li>
+              <li>Created 300+ features for model training</li>
+              <li>Led the hosting and deployment of the solution on Dataiku in 3 months</li>
+              <li>Outcome: Led to 125% increase in sales of newly launched product relative to its previous quarter sales</li>
+              <li>Outcome: Client sponsored projects to implement this solution in the Bladder and Neuroscience market</li>
+              <li>Tech & Tools: Dataiku-DSS, PySpark, SQL, Python, XGBoost, GitHub, JIRA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience">
+        <h3>LineupX – ML Intern (Apr 2020 - Oct 2020)</h3>
+        <ul>
+          <li>Worked on PoCs of products that assisted recruiters with candidate selection</li>
+        </ul>
+        <!-- Mapped projects for this role -->
+        <div class="subprojects">
+          <h4>Projects</h4>
+
+          <div class="project">
+            <h3>Resume Parser (Apr 2020 - Oct 2020)</h3>
+            <ul>
+              <li>Parsing Resumes, segmenting and identifying different sections of the resumes</li>
+              <li>Used Computer Vision, NLP and XML structure of the docx format for resumes</li>
+              <li>Outcome: 82% accuracy achieved for identifying all the sections accurately</li>
+              <li>Tech & Tools: SpaCy, NLTK, OpenCV, XML, AWS (Lambda, Chalice), OCR, Flask (APIs)</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h3>Job Description Generator (Apr 2020 - Oct 2020)</h3>
+            <ul>
+              <li>Given a simple prompt of job title and generate a suitable job description for it</li>
+              <li>Used GPT-2 model fine-tuned on job description data</li>
+              <li>Outcome: The POC was presented to the founder of the company</li>
+              <li>Tech & Tools: GPT-2 (Hugging Face), Python, Tensorflow-GPU</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience">
+        <h3>QCRI – ML Intern (Apr 2019 - Jun 2019)</h3>
+        <ul>
+          <li>Experimented with 3 models to achieve the highest performance of 76% accuracy for gene data imputation</li>
+        </ul>
+        <!-- Mapped project for this role -->
+        <div class="subprojects">
+          <h4>Projects</h4>
+
+          <div class="project">
+            <h3>Imputation of Gene Data (Apr 2019 - Jun 2019)</h3>
+            <ul>
+              <li>Gene data represented by SNPs which have more than 90% of data missing</li>
+              <li>Compare 3 different deep learning algorithms for imputation of gene data</li>
+              <li>All the model implementation was done in Tensorflow and trained on GPUs</li>
+              <li>Outcome: One Model (Denoising Autoencoders) performed significantly better (76%) than the other two methods (&lt;20%)</li>
+              <li>This project won the 2nd prize for best project of QCRI 2019 Summer Internship</li>
+              <li>Tech & Tools: Python, Tensorflow, Bash</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
@@ -121,41 +249,6 @@
           <li>Outcome: Led to 125% increase in sales of newly launched product relative to its previous quarter sales</li>
           <li>Outcome: Client sponsored projects to implement this solution in the Bladder and Neuroscience market</li>
           <li>Tech & Tools: Dataiku-DSS, PySpark, SQL, Python, XGBoost, GitHub, JIRA</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <div class="experience">
-        <h3>ZS Associates – Data Science Associate Consultant (Jan 2024 - Apr 2024)</h3>
-        <ul>
-          <li>Led the deployment of a prediction model for early adoption of an oncology therapy developed by the client for NSCLC Patients which increased the product sales by 125% relative to the previous quarter</li>
-          <li>Completed the Early adoption model deployment in under 3 months while onboarding and mentoring the 4 member team</li>
-          <li>Won 2 projects in Bladder Cancer and Anhedonia Therapeutic Areas for the same client</li>
-          <li>Directed the daily client meetings and delegated tasks such that the project was delivered within schedule</li>
-        </ul>
-      </div>
-      <div class="experience">
-        <h3>ZS Associates – Data Science Associate (Jun 2021 - Dec 2023)</h3>
-        <ul>
-          <li>Served 3 Pharmaceutical and 1 Airline Client by delivering 7 ML/AI projects</li>
-          <li>Implemented a 300+ feature Data Engineering Pipeline using Pyspark in under 2 months</li>
-          <li>Implemented the research and development experiments for rareBERT algorithm over 1.5 years. The model had a 60% performance lift over the baseline approach for predicting early adopters of a drug</li>
-          <li>Trained health care provider models for 7 different target variables for Botox Treatment Therapy over 4 therapeutic areas that achieved at least 90% AUPRC</li>
-          <li>Accomplished and presented the results for the Botox model to the clients in under 4 weeks</li>
-        </ul>
-      </div>
-      <div class="experience">
-        <h3>LineupX – ML Intern (Apr 2020 - Oct 2020)</h3>
-        <ul>
-          <li>Worked on PoCs of products that assisted recruiters with candidate selection</li>
-        </ul>
-      </div>
-      <div class="experience">
-        <h3>QCRI – ML Intern (Apr 2019 - Jun 2019)</h3>
-        <ul>
-          <li>Experimented with 3 models to achieve the highest performance of 76% accuracy for gene data imputation</li>
         </ul>
       </div>
     </section>
