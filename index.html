@@ -67,6 +67,15 @@
       margin-bottom: 0;
       padding-bottom: 0;
     }
+    .education-sub {
+      margin-left: 40px;   /* pushes coursework to the right */
+      margin-top: 10px;
+      padding-left: 20px;
+      border-left: 3px solid #eee; /* optional visual cue */
+    }
+
+
+    
   </style>
 </head>
 <body>
@@ -86,7 +95,21 @@
       <div class="experience">
         <h3>ZS Associates – Data Science Associate Consultant (Jan 2024 - Apr 2024)</h3>
         <p><strong>Summary:</strong> Led deployment of an oncology-therapy early adoption model for NSCLC patients, resulting in a <strong>125% sales increase in the following quarter</strong>. Delivered the solution in <strong>under 3 months</strong> while onboarding and mentoring a 4-member team. <strong>Won 2 additional projects</strong> in Bladder Cancer and Anhedonia, and <strong>directed daily client meetings</strong> to ensure on-schedule delivery.</p>
-        <!-- No mapped project subsection for this role per instructions -->
+        <div class="subprojects">
+          <h4>Projects</h4>
+
+          <div class="project">
+            <h3>Deploying the Early Adopter Model (Jan 2024 - Apr 2024)</h3>
+            <ul>
+              <li>Using machine learning models to predict early adopters of a drug and deploy the pipeline into the client’s production ecosystem.</li>
+              <li>Completed end-to-end deployment in 3 months.</li>
+              <li>Onboarded and mentored 3 new team members during the project.</li>
+              <li>Transformed PoC code into production-ready pipelines and integrated them with client systems.</li>
+              <li>Successfully handed over the final deployment to the client.</li>
+              <li>Outcome: Delivered a scalable, production-grade system that streamlined adoption prediction for the client.</li>
+              <li>Tech & Tools: Python, PySpark, SQL, Dataiku, GitHub, JIRA.</li>
+            </ul>
+          </div>
       </div>
 
       <div class="experience">
@@ -95,18 +118,6 @@
         <!-- Mapped projects for this role -->
         <div class="subprojects">
           <h4>Projects</h4>
-
-          <div class="project">
-            <h3>Early Adopter Prediction using Deep Learning (Jan 2022 - Mar 2023)</h3>
-            <ul>
-              <li>Predict the early adoption of a pharmaceutical product using patient journey data</li>
-              <li>Experimented with a graph based embedding model and rareBERT (variation of the original BERT model)</li>
-              <li>The models was tried on Immunology, Oncology, HIV Market</li>
-              <li>Outcome: The graph based model failed to give any desired results however rareBERT was performing 60% better than the baseline approach</li>
-              <li>Tech & Tools: PyTorch, Python, Parallel Programming, GPUs, PySpark, SQL, AWS (Redshift, EC2, EKS, SageMaker)</li>
-            </ul>
-          </div>
-
           <div class="project">
             <h3>Early Adopter using Feature Engineering (May 2023 - Apr 2024)</h3>
             <ul>
@@ -119,6 +130,30 @@
               <li>Tech & Tools: Dataiku-DSS, PySpark, SQL, Python, XGBoost, GitHub, JIRA</li>
             </ul>
           </div>
+
+          <div class="project">
+            <h3>Customer Archetype Prediction (July 2022 - Aug 2022)</h3>
+            <ul>
+              <li>Identified 7 distinct customer archetypes in the Botox market to guide client strategy.</li>
+              <li>Developed predictive models for each archetype and conducted driver analysis to uncover strong causal factors.</li>
+              <li>Addressed missing value issues in the dataset using MICE imputation for robust modeling.</li>
+              <li>Presented insights and recommendations directly to the client.</li>
+              <li>Outcome: Achieved an average Precision-Recall score above 90% across all models.</li>
+              <li>Tech & Tools: Python, XGBoost, SHAP, Jupyter Notebook.</li>
+            </ul>
+          </div>
+          <div class="project">
+            <h3>Early Adopter Prediction using Deep Learning (Jun 2021 - Dec 2022)</h3>
+            <ul>
+              <li>Predict the early adoption of a pharmaceutical product using patient journey data</li>
+              <li>Experimented with a graph based embedding model and rareBERT (variation of the original BERT model)</li>
+              <li>The models was tried on Immunology, Oncology, HIV Market</li>
+              <li>Outcome: The graph based model failed to give any desired results however rareBERT was performing 60% better than the baseline approach</li>
+              <li>Tech & Tools: PyTorch, Python, Parallel Programming, GPUs, PySpark, SQL, AWS (Redshift, EC2, EKS, SageMaker)</li>
+            </ul>
+          </div>
+
+          
         </div>
       </div>
 
@@ -176,32 +211,23 @@
     <section>
       <h2>Projects</h2>
       <div class="project">
-        <h3>Resume Parser (Apr 2020 - Oct 2020)</h3>
+        <h3>Bug Discovery via Grey-box Fuzzing (June 2025 - Present)</h3>
         <ul>
-          <li>Parsing Resumes, segmenting and identifying different sections of the resumes</li>
-          <li>Used Computer Vision, NLP and XML structure of the docx format for resumes</li>
-          <li>Outcome: 82% accuracy achieved for identifying all the sections accurately</li>
-          <li>Tech & Tools: SpaCy, NLTK, OpenCV, XML, AWS (Lambda, Chalice), OCR, Flask (APIs)</li>
+          <li>Developed an improved benchmarking framework to evaluate fuzzers on multiple target programs.</li>
+          <li>Designed methods to explore runtime and compile-time configurations of the same target program.</li>
+          <li>Created multiple strategies for generating and testing configurations to enhance bug discovery.</li>
+          <li>Outcome: Produced a flexible benchmark that increased coverage and improved fuzzer evaluation accuracy.</li>
+          <li>Tech & Tools: AFL++, C/C++, Docker, Bash, Linux, Git, Python.</li>
         </ul>
       </div>
       <div class="project">
-        <h3>Job Description Generator (Apr 2020 - Oct 2020)</h3>
+        <h3>Photo-Share app (Aug 2024 - Dec 2024)</h3>
         <ul>
-          <li>Given a simple prompt of job title and generate a suitable job description for it</li>
-          <li>Used GPT-2 model fine-tuned on job description data</li>
-          <li>Outcome: The POC was presented to the founder of the company</li>
-          <li>Tech & Tools: GPT-2 (Hugging Face), Python, Tensorflow-GPU</li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Imputation of Gene Data (Apr 2019 - Jun 2019)</h3>
-        <ul>
-          <li>Gene data represented by SNPs which have more than 90% of data missing</li>
-          <li>Compare 3 different deep learning algorithms for imputation of gene data</li>
-          <li>All the model implementation was done in Tensorflow and trained on GPUs</li>
-          <li>Outcome: One Model (Denoising Autoencoders) performed significantly better (76%) than the other two methods (&lt;20%)</li>
-          <li>This project won the 2nd prize for best project of QCRI 2019 Summer Internship</li>
-          <li>Tech & Tools: Python, Tensorflow, Bash</li>
+          <li>Built a full-stack photo-sharing web application with user authentication, profile management, and photo upload features.</li>
+          <li>Enabled users to create and manage accounts, post photos, and share content seamlessly.</li>
+          <li>Set up a MongoDB database, backend with Express, and designed frontend with React.</li>
+          <li>Outcome: Delivered a fully functional web application demonstrating scalable CRUD operations and modern UI/UX.</li>
+          <li>Tech & Tools: React, Express, Node.js, MongoDB, JavaScript, HTML/CSS.</li>
         </ul>
       </div>
       <div class="project">
@@ -211,29 +237,7 @@
           <li>The emotion detection model is a Convolutional Neural Network (CNN) which also uses pre-trained models</li>
           <li>Once the emotion is identified appropriate music is recommended by the player demonstrated by a web app created by the team</li>
           <li>Outcome: Our findings were published in the 2021 6th International Conference for Convergence in Technology (I2CT)</li>
-          <li>Tech & Tools: ResNet50, SeNet50, VGG16, TensorFlow, Python</li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Early Adopter Prediction using Deep Learning (Jan 2022 - Mar 2023)</h3>
-        <ul>
-          <li>Predict the early adoption of a pharmaceutical product using patient journey data</li>
-          <li>Experimented with a graph based embedding model and rareBERT (variation of the original BERT model)</li>
-          <li>The models was tried on Immunology, Oncology, HIV Market</li>
-          <li>Outcome: The graph based model failed to give any desired results however rareBERT was performing 60% better than the baseline approach</li>
-          <li>Tech & Tools: PyTorch, Python, Parallel Programming, GPUs, PySpark, SQL, AWS (Redshift, EC2, EKS, SageMaker)</li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Early Adopter using Feature Engineering (May 2023 - Apr 2024)</h3>
-        <ul>
-          <li>Using feature engineering and machine learning models trained on analog products to predict early adopters of a drug yet to launch</li>
-          <li>XGBoost model was used</li>
-          <li>Created 300+ features for model training</li>
-          <li>Led the hosting and deployment of the solution on Dataiku in 3 months</li>
-          <li>Outcome: Led to 125% increase in sales of newly launched product relative to its previous quarter sales</li>
-          <li>Outcome: Client sponsored projects to implement this solution in the Bladder and Neuroscience market</li>
-          <li>Tech & Tools: Dataiku-DSS, PySpark, SQL, Python, XGBoost, GitHub, JIRA</li>
+          <li>Tech & Tools: ResNet50, TensorFlow, Python</li>
         </ul>
       </div>
     </section>
@@ -249,10 +253,40 @@
     <section>
       <h2>Education</h2>
       <ul>
-        <li><strong>The University of Texas at Dallas</strong>, Dallas, Texas – MS in Computer Science (4.0 GPA), Graduating in May 2026</li>
-        <li><strong>National Institute of Technology Karnataka</strong>, Mangalore – B.Tech., Information Technology (7.86 GPA), May 2021</li>
+        <li>
+          <strong>The University of Texas at Dallas</strong>, Dallas, Texas – MS in Computer Science (4.0 GPA), Graduating in May 2026
+          <div class="education-sub">
+            <h4>Relevant Coursework</h4>
+            <ul>
+              <li>Big Data Management </li>
+              <li>Database Design</li>
+              <li>Machine Learning</li>
+              <li>Statistical methods for Data Science</li>
+            </ul>
+          </div>
+          <br>
+        </li>
+        <li>
+          <strong>National Institute of Technology Karnataka</strong>, Mangalore – B.Tech., Information Technology (7.86 GPA), May 2021
+          <div class="education-sub">
+            <h4>Relevant Coursework</h4>
+            <ul>
+              <li>Soft Computing</li>
+              <li>Database Systems</li>
+              <li>Data Warehousing and Data Mining</li>
+              <li>Compute Vision</li>
+              <li>Information Retrieval</li>
+              <li>Foundations of Machine Learning</li>
+            </ul>
+          </div>
+          <br>
+        </li>
       </ul>
+
     </section>
+
+
+
 
     <section>
       <h2>Skills</h2>
@@ -264,13 +298,13 @@
           <strong>ML Libraries:</strong> TensorFlow, PyTorch, scikit-learn, OpenCV, SpaCy, NLTK
         </div>
         <div>
-          <strong>Data Tools:</strong> PySpark, SQL, MongoDB
+          <strong>Data Tools:</strong> PySpark, SQL, MongoDB, Kafka, Pandas, NumPy, matplotlib
         </div>
         <div>
           <strong>Web:</strong> Flask, NodeJS, Express, React
         </div>
         <div>
-          <strong>Cloud & DevOps:</strong> AWS, Docker, Dataiku
+          <strong>Cloud & DevOps:</strong> AWS, Docker, Dataiku, Git, JIRA
         </div>
       </div>
     </section>
